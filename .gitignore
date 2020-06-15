@@ -1,9 +1,14 @@
 target
+**/target
 .project
+**/.project
 .classpath
+**/.classpath
 .settings
+**/.settings
 mvnw*
 .vscode
+**/.vscode
 .sts4*
 HELP.md
 
