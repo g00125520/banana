@@ -15,6 +15,7 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
+        HbaseUtils.doNothing();
         assertTrue( true );
     }
 }

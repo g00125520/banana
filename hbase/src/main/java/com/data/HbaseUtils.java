@@ -53,4 +53,8 @@ public class HbaseUtils {
         return true;
     }
 
+    public static void doNothing(){
+
+    }
+
 }
