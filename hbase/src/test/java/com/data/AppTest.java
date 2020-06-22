@@ -2,6 +2,8 @@ package com.data;
 
 import static org.junit.Assert.assertTrue;
 
+import com.data.hbase.HbaseUtils;
+
 import org.junit.Test;
 
 /**

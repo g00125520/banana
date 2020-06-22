@@ -1,4 +1,4 @@
-package com.data;
+package com.data.hbase;
 
 import java.util.List;
 
