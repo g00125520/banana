@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+  name="${artifactId}">
+
+  <requiredProperties>
+    <requiredProperty key="groupId">
+      <defaultValue>com.ld</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="artifactId">
+      <defaultValue>sc</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+
+  <modules>
+    <module id="${rootArtifactId}-eureka" name="${rootArtifactId}-eureka" dir="__rootArtifactId__-eureka">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>  
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-utils" name="${rootArtifactId}-utils" dir="__rootArtifactId__-utils">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>  
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-h2" name="${rootArtifactId}-h2" dir="__rootArtifactId__-h2">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>  
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-consumer" name="${rootArtifactId}-consumer" dir="__rootArtifactId__-consumer">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>  
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-hystrix-dashboard" name="${rootArtifactId}-hystrix-dashboard" dir="__rootArtifactId__-hystrix-dashboard">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>  
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-zuul" name="${rootArtifactId}-zuul" dir="__rootArtifactId__-zuul">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>  
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-config" name="${rootArtifactId}-config" dir="__rootArtifactId__-config">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8" packaged="true">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.*</include>
+          </includes>
+        </fileSet>  
+      </fileSets>
+    </module>
+ </modules>
+
+ <!-- 
+   filtered="true";the selected files will be generated using the Velocity engine
+   packaged="true"; the files will be generated in the src/main/java directory of the generated project in the same directory as in the JAR file, but with that directory prepended by the package property.
+ -->
+ <fileSets>
+   <fileSet encoding="UTF-8" filtered="true">
+     <directory>scripts</directory>
+     <includes>
+       <include>**/*.*</include>
+     </includes>
+   </fileSet>
+   <fileSet encoding="UTF-8" >
+     <directory>.vscode</directory>
+     <includes>
+       <include>**/*.*</include>
+     </includes>
+   </fileSet>
+ </fileSets>
+ 
+</archetype-descriptor>

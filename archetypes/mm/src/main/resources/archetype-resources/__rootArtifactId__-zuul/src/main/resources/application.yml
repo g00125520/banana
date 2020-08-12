@@ -1,0 +1,38 @@
+server:
+    port: 8084
+
+eureka:
+    client:
+        serviceUrl: 
+            defaultZone: http://127.0.0.1:8761/eureka
+
+spring:
+    application:
+        name: zuul
+
+# https://www.jianshu.com/p/670cc7f4a5bb
+# 用 serviceId 进行路由时，使用 ribbon.ReadTimeout 和 ribbon.SocketTimeout 设置
+# 用指定 url 进行路由时，使用 zuul.host.connect-timeout-millis 和 zuul.host.socket-timeout-millis 设置
+ribbon:
+    ReadTimeout: 3000
+    ConnectTimeout: 3000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+
+# https://www.jianshu.com/p/d5943e303a1f
+management:
+    endpoint:
+        health:
+            show-details: always
+        routes:
+            enabled: true
+    endpoints:
+        web:   
+            exposure:
+                include: '*'

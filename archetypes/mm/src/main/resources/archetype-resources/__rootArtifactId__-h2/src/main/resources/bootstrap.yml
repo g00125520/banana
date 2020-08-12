@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: user-provider-h2
+    cloud:
+        config:
+            #uri: http://127.0.0.1:8085
+            #profile: dev
+            label: master
+            discovery:
+                enabled: true
+                service-id: config-server

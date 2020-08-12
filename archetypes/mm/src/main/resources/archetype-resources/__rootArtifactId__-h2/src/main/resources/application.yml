@@ -1,0 +1,41 @@
+server:
+    port: 8081
+
+eureka:
+    client:
+        serviceUrl: 
+            defaultZone: http://127.0.0.1:8761/eureka/
+    instance:
+        prefer-ip-address: true
+        metadata-map:
+            my-metadata: 自定义元数据
+
+# refresh spring cloud config
+# curl -X POST http://127.0.0.1:8081/actuator/refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,mappings   
+
+spring:
+    application:
+        name: user-provider-h2
+    jpa:
+        generate-ddl: false
+        show-sql: true
+        hibernate:
+            ddl-auto: none
+    datasource:
+        platform: h2
+        schema: classpath:schema.sql
+        data: classpath:data.sql
+
+logging:
+    level:
+        root: INFO
+        org.hibernate: INFO
+        org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+        org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+        org.springframework.web.servlet.DispatcherServlet: DEBUG
+        

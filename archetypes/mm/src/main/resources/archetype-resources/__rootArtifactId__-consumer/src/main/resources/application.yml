@@ -1,0 +1,30 @@
+server:
+    port: 8082
+       
+eureka:
+    client:
+        serviceUrl: 
+            defaultZone: http://127.0.0.1:8761/eureka/
+    instance:
+        prefer-ip-address: true
+        metadata-map:
+            my-metadata: 自定义元数据
+
+feign:
+    hystrix:
+        enabled: true
+        
+user-provider-h2:
+    ribbon:
+        # NFLoadBalancerClassName: xxxxx
+        NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+        # NFLoadBalancerPingClassName: xxxxx
+        # NIWSServerListClassName: xxxxx
+        # NIWSServerListFilterClassName: xxxxx
+logging:
+    level:
+        ${package}.feign.UserFeignClient: DEBUG
+                
+spring:
+    application:
+        name: user-consumer-h2

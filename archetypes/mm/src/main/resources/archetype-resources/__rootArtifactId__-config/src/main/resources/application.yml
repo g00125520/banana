@@ -1,0 +1,20 @@
+server:
+    port: 8085
+
+eureka:
+    client:
+        serviceUrl: 
+            defaultZone: http://127.0.0.1:8761/eureka/
+    instance:
+        prefer-ip-address: true
+
+spring:
+    application:
+        name: config-server
+    cloud:
+        config:
+            server:
+                git:
+                    uri: file://${user.home}/config # Windows系统需要使用file:///前缀
+                    username: 
+                    password: 
