@@ -10,7 +10,7 @@ in short, the microservice architectural style is an approach to developing a si
 
 ## ddd
 
-[domain driven design](https://www.infoq.cn/article/domain-driven-design-quickly/) | [12 factor](https://12factor.net/zh_cn/) | [conway law](https://www.infoq.cn/article/every-architect-should-study-conway-law/)
+[domain driven design](https://www.infoq.cn/article/domain-driven-design-quickly/) | [12 factor](https://12factor.net/zh_cn/) | [conway law](https://www.infoq.cn/article/every-architect-should-study-conway-law/) | [solid](https://blog.csdn.net/rocketeerli/article/details/81585705)
 
 bounded context
 
@@ -24,7 +24,15 @@ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -Darchetyp
 
 mvn archetype:generate -DarchetypeGroupId=com.laodao -DarchetypeCatalog=local -DarchetypeArtifactId=mm -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=com.ld -DartifactId=sc -Dversion=1.0-SNAPSHOT
 
+mvn archetype:generate -DarchetypeGroupId=com.laodao -DarchetypeCatalog=local -DarchetypeArtifactId=storm -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=com.dt -DartifactId=dataclean2 -Dversion=1.0-SNAPSHOT
+
 [mvn archetype:create-from-project](http://maven.apache.org/archetype/maven-archetype-plugin/create-from-project-mojo.html)
+
+archetype:create-from-project -DpackageName=com.laodao，告诉create-from-project命令项目的基础包是什么,防止archetype个别情况猜测包路径错误；
+
+&lt;fileSet filtered="true" packaged="true"> :  filtered表示是否对形如${x}这样的参数进行替换;packaged表示是否将该目录下的内容放入到生成项目的包路径下
+
+\#set( $symbol_pound = '#' )  velocity自定义变量，new Debug("${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound} vehicles")
 
 ## jdt
 

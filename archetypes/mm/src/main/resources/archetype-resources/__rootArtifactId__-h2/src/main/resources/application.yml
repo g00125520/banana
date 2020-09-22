@@ -30,7 +30,11 @@ spring:
         platform: h2
         schema: classpath:schema.sql
         data: classpath:data.sql
-
+    zipkin:
+        base-url: http://127.0.0.1:9411
+    sleuth:
+        sampler:
+            probability: 1.0
 logging:
     level:
         root: INFO

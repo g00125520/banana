@@ -21,10 +21,17 @@ user-provider-h2:
         # NFLoadBalancerPingClassName: xxxxx
         # NIWSServerListClassName: xxxxx
         # NIWSServerListFilterClassName: xxxxx
+
 logging:
     level:
         ${package}.feign.UserFeignClient: DEBUG
+        org.springframework.cloud.sleuth: DEGUG
                 
 spring:
     application:
         name: user-consumer-h2
+    zipkin:
+        base-url: http://127.0.0.1:9411
+    sleuth:
+        sampler:
+            probability: 1.0

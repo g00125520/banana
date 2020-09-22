@@ -63,6 +63,12 @@ start() {
     #done
     echoGreen "started ${rootArtifactId}-config" 
 
+    echoGreen "starting zipkin..." 
+    #[ ! -e zipkin.java ] && curl -sSL https://zipkin.io/quickstart.sh | bash -s
+    [ -e /mnt/e/shumeng/tools/zipkin.jar ] && nohup java -jar /mnt/e/shumeng/tools/zipkin.jar > sc-zipkin.log 2>&1 &
+    sleep 6 
+    echoGreen "started zipkin" 
+
     echoGreen "starting ${rootArtifactId}-h2 ..." 
     nohup java -Xms128m -Xmx256m -Xdebug \
          -Xrunjdwp:server=y,transport=dt_socket,address=8882,suspend=n \
